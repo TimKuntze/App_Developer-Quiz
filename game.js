@@ -88,18 +88,18 @@ let question_number = 0;
 let progress = 0;
 
 function hideElements() {
-    document.getElementById('text').style.display = 'none'; 
-    document.getElementById('main-image').style.display = 'none'; 
+    document.getElementById('text').style.display = 'none';
+    document.getElementById('main-image').style.display = 'none';
     document.getElementById('start-btn-container').style.display = 'none';
     document.getElementById('nav-bar').classList.add('d-none');
 }
 
 function startQuiz() {
-    hideElements(); 
+    hideElements();
     document.getElementById('question').classList.remove('d-none');
-    document.getElementById('instruction').classList.remove('d-none'); 
+    document.getElementById('instruction').classList.remove('d-none');
     document.getElementById('nav-bar-html').classList.remove('d-none');
-    loadQuestion(); 
+    loadQuestion();
 }
 
 function loadQuestion() {
@@ -125,30 +125,33 @@ function nextQuestion() {
 }
 
 function finishQuiz() {
-    
+
     if (question_number == allQuestions.length) {
         document.getElementById('quizcontainer').classList.add('d-none');
         document.getElementById('quizdone').classList.remove('d-none');
-} else {
-    document.getElementById('quizdone').classList.add('d-none');
-}}
+    } else {
+        document.getElementById('quizdone').classList.add('d-none');
+    }
+}
 
 function answer(a) {
 
     if (a == right_answer) { //right answer
-        document.getElementById('wrong-answer').classList.add('d-none');
-        document.getElementById('correct-answer').classList.remove('d-none');
+        document.getElementById('answer-container').classList.add('answer-correct');
         //show next button 
         document.getElementById('next').classList.remove('d-none');
 
 
     } else {
 
-        document.getElementById('correct-answer').classList.add('d-none');
-        document.getElementById('next').classList.add('d-none');
-        document.getElementById('wrong-answer').classList.remove('d-none');
-
-
+        document.getElementById('answer-container').classList.add('answer-wrong');
     }
+}
 
+function backQuestion() {
+    if (question_number > 1) {
+        document.getElementById('back').classList.remove('d-none');
+    } else {
+        document.getElementById('back').classList.add('d-none');
+    }
 }
