@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <title>QuizzApp - New Design</title>
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body>
+
+  <div class="progress">
+    <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+  <div class="quizcontainer" id="quizcontainer">
+    <div class="alert alert-success d-none" id="correct-answer" role="alert">
+      Your answer is correct!!
+    </div>
+    <div class="alert alert-danger d-none" id="wrong-answer" role="alert">
+      Your answer is wrong...
+    </div>
+
+    <div class="quizcontainer-left">
+      <img class="quiz-logo" src="img/Quiz app 1.png">
+
+      <div class="nav-bar">
+        <span class="nav-bar-points" id="nav-bar-points-html">HTML</span>
+        <span class="nav-bar-points">CSS</span>
+        <span class="nav-bar-points">JS</span>
+        <span class="nav-bar-points">Java</span>
+      </div>
+    </div>
+
+    <div class="quizcontainer-right">
+      <div id="main-image"><img class="main-image" src="img/Slide1 2.jpg">
+      </div>
+      <div id="text" class="text">
+        <h1><b>Welcome to the awesome Developer Quiz</b></h1>
+        <p class="sub-text">Ready for the challenge? </p>
+      </div>
+
+      <div class="question d-none" id="question">
+        Question will come here
+      </div>
+
+      <div id="start-btn-container" class="start-btn-container" onclick="startQuiz()">
+        <div class="start-btn">
+          <div class="start-btn-text">START NOW
+          </div>
+          <div class="start-btn-arrow"><img src="img/arrow-30-32.png">
+          </div>
+
+        </div>
+      </div>
+
+
+      <div>
+        <div class="question-buttons">
+          <button class="btn btn-custom" id="answer1" onclick="answer(1)">Answer A</button>
+          <button class="btn btn-custom" id="answer2" onclick="answer(2)">Answer B</button>
+          <button class="btn btn-custom" id="answer3" onclick="answer(3)">Answer C</button>
+          <button class="btn btn-custom" id="answer4" onclick="answer(4)">Answer D</button>
+          
+         
+
+        </div>
+      </div>
+      <div>
+        <button onclick="nextQuestion()" id="next" class="btn btn-light d-none">Next question</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
