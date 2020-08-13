@@ -35,21 +35,36 @@ body {
     margin-top: 1.5em;
     display: flex;
     flex-direction: column;
+    width: 100%; 
 }
 
-.nav-bar span {
+.nav-bar-html {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+.nav-bar-points {
+    margin-top: 16px;
     color: #a5b4f6;
     font-size: 1.7em;
     border-left: solid 0.3em #173ce8;
 }
 
-.nav-bar-points {
+.nav-bar-points-html {
     margin-top: 16px;
+    color: white; 
+    font-size: 1.7em;
+    border-left: solid 0.3em white;
 }
 
-.nav-bar-selected {
-    
-    border-left: solid 0.3em white;
+.nav-bar-points span{
+    margin-left: 30%; 
+}
+
+.nav-bar-points-html span{
+    margin-left: 30%;
 }
 
 .quizcontainer-right {
@@ -83,7 +98,16 @@ body {
     width: 60%; 
     font-size: x-large;
     font-weight: bold;
+}
 
+.instruction {
+    position: absolute;
+    top: 19%; 
+    right: 20%; 
+    left: 20%; 
+    color: rgb(160, 160, 160); 
+    text-align: center;
+    width: 60%; 
 }
 
 .sub-text {
@@ -116,6 +140,7 @@ body {
     margin-right: 16px; 
     color: white; 
     font-size: x-large;
+    
 }
 
 .start-btn-arrow {
@@ -157,6 +182,10 @@ body {
 }
 
 .question-buttons button {
-    width: 48%;
+    width: 75%;
     height: 68px;
+}
+
+.next-button {
+    border-radius: 100px;
 }
