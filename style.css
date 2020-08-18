@@ -45,6 +45,27 @@ body {
     width: 100%;
 }
 
+.nav-bar-css {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-bar-js {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-bar-java {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .nav-bar-points {
     margin-top: 16px;
     color: #a5b4f6;
@@ -59,11 +80,44 @@ body {
     border-left: solid 0.3em white;
 }
 
+.nav-bar-points-css {
+    margin-top: 16px;
+    color: white;
+    font-size: 1.7em;
+    border-left: solid 0.3em white;
+}
+
+.nav-bar-points-js {
+    margin-top: 16px;
+    color: white;
+    font-size: 1.7em;
+    border-left: solid 0.3em white;
+}
+
+.nav-bar-points-java {
+    margin-top: 16px;
+    color: white;
+    font-size: 1.7em;
+    border-left: solid 0.3em white;
+}
+
 .nav-bar-points span {
     margin-left: 30%;
 }
 
 .nav-bar-points-html span {
+    margin-left: 30%;
+}
+
+.nav-bar-points-css span {
+    margin-left: 30%;
+}
+
+.nav-bar-points-js span {
+    margin-left: 30%;
+}
+
+.nav-bar-points-java span {
     margin-left: 30%;
 }
 
@@ -118,7 +172,7 @@ body {
 
 .answer-container {
     display: flex;
-    width: 60%;
+    width: 75%;
     margin: 8px;
     background: white;
     font-size: x-large;
@@ -218,9 +272,16 @@ body {
     bottom: 2em; 
     right: 2em; 
     border-radius: 100px;
-    width: 5em; 
-    height: 5em; 
+    width: 4em; 
+    height: 4em; 
     background: #dbdff4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-button img {
+    width: 1.5em; 
 }
 
 .back-button {
@@ -228,7 +289,14 @@ body {
     bottom: 2em; 
     left: 2em; 
     border-radius: 100px;
-    width: 5em; 
-    height: 5em; 
+    width: 4em; 
+    height: 4em; 
     background: #dbdff4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-button img {
+    width: 1.5em; 
 }

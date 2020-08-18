@@ -15,7 +15,7 @@
 <body>
 
   <div class="progress">
-    <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar w-0" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
 
   <div class="quizcontainer" id="quizcontainer">
@@ -40,6 +40,24 @@
         <div class="nav-bar-points"><span>CSS</span></div>
         <div class="nav-bar-points"><span>JS</span></div>
         <div class="nav-bar-points"><span>Java</span></div>
+      </div>
+      <div class="nav-bar-css d-none" id="nav-bar-css">
+        <div class="nav-bar-points"><span>HTML</span></div>
+        <div class="nav-bar-points-css"><span>CSS</span></div>
+        <div class="nav-bar-points"><span>JS</span></div>
+        <div class="nav-bar-points"><span>Java</span></div>
+      </div>
+      <div class="nav-bar-js d-none" id="nav-bar-js">
+        <div class="nav-bar-points"><span>HTML</span></div>
+        <div class="nav-bar-points"><span>CSS</span></div>
+        <div class="nav-bar-points-js"><span>JS</span></div>
+        <div class="nav-bar-points"><span>Java</span></div>
+      </div>
+      <div class="nav-bar-java d-none" id="nav-bar-java">
+        <div class="nav-bar-points"><span>HTML</span></div>
+        <div class="nav-bar-points"><span>CSS</span></div>
+        <div class="nav-bar-points"><span>JS</span></div>
+        <div class="nav-bar-points-java"><span>Java</span></div>
       </div>
     </div>
 
@@ -96,8 +114,10 @@
         </div>
       </div>
       <div onclick="nextQuestion()" id="next" class="next-button btn-light d-none">
+        <img src="img/arrow-24-32.png">
       </div>
       <div onclick="backQuestion()" id="back" class="back-button btn-light d-none">
+        <img src="img/arrow-88-32.png">
       </div>
     </div>
   </div>
