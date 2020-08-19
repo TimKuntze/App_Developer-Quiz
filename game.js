@@ -1,5 +1,4 @@
 //questions
-
 let allQuestions = [
     {   //question#1
         'question': 'Who invented HTML?',
@@ -96,6 +95,9 @@ function startQuiz() {
 }
 
 function navbarSelection() {
+    if (question_number > 0) {
+        document.getElementById('back').classList.remove('d-none'); 
+    }
     if (question_number > 2) {
         document.getElementById('nav-bar-html').classList.add('d-none');
         document.getElementById('nav-bar-css').classList.remove('d-none');
@@ -121,6 +123,7 @@ function loadQuestion() {
     document.getElementById('answer3').innerHTML = allQuestions[question_number]['answer_3'];
     document.getElementById('answer4').innerHTML = allQuestions[question_number]['answer_4'];
     right_answer = allQuestions[question_number]['right-answer'];
+    
 }
 
 function nextQuestion() {
@@ -129,10 +132,21 @@ function nextQuestion() {
         finishQuiz();
     } else {
         question_number = question_number + 1;
-        backQuestion();
         loadQuestion();
         navbarSelection();
     }
+}
+
+function backQuestion() {
+    blockSelection = false;
+    if (question_number > 0) {
+        question_number = question_number - 1;
+        loadQuestion();
+    } 
+    if (question_number == 0) {
+        document.getElementById('back').classList.add('d-none');
+        loadQuestion();
+    } 
 }
 
 function progressBar() {
@@ -158,17 +172,10 @@ function answer(a) {
             //show next button 
             document.getElementById('next').classList.remove('d-none');
         } else {
-
             document.getElementById('answer-container').classList.add('answer-wrong');
         }
     }
 }
 
-function backQuestion() {
-    if (question_number > 0) {
-        document.getElementById('back').classList.remove('d-none');
-    } else {
-        document.getElementById('back').classList.add('d-none');
-    }
-}
+
 
