@@ -156,12 +156,28 @@ function progressBar() {
 }
 
 function finishQuiz() {
-    if (question_number == allQuestions.length) {
-        document.getElementById('quizcontainer').classList.add('d-none');
-        document.getElementById('quizdone').classList.remove('d-none');
-    } else {
-        document.getElementById('quizdone').classList.add('d-none');
-    }
+    document.getElementById('resultpage').classList.remove('d-none'); 
+    document.getElementById('question').classList.add('d-none');
+    document.getElementById('instruction').classList.add('d-none');
+    document.getElementById('nav-bar-html').classList.add('d-none');
+    document.getElementById('nav-bar-java').classList.add('d-none');
+    document.getElementById('nav-bar').classList.remove('d-none');
+    document.getElementById('answer-buttons').classList.add('d-none');
+    document.getElementById('back').classList.add('d-none');
+
+}
+
+function repeatQuiz() {
+    document.getElementById('answer-buttons').classList.remove('d-none');
+    document.getElementById('resultpage').classList.add('d-none'); 
+    hideElements();
+    document.getElementById('question').classList.remove('d-none');
+    document.getElementById('instruction').classList.remove('d-none');
+    document.getElementById('nav-bar-html').classList.remove('d-none');
+    question_number = 0; 
+    document.getElementById('back').classList.add('d-none');
+    loadQuestion();
+
 }
 
 function answer(a) {

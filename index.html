@@ -89,7 +89,7 @@
 
 
       <div>
-        <div class="answer-buttons">
+        <div class="answer-buttons" id="answer-buttons">
           <div class="answer-container" id="answer-container">
             <div class="letter"><b>A</b></div>
             <div class="answer" id="answer1" onclick="answer(1)">Answer A
@@ -119,6 +119,33 @@
       <div onclick="backQuestion()" id="back" class="back-button btn-light d-none">
         <img src="img/arrow-88-32.png">
       </div>
+
+<div class="resultpage d-none" id="resultpage">
+  <div id="text" class="text">
+    <h1><b>Good job! </b></h1>
+    <p class="sub-text">Here are your results: </p>
+  </div>
+<div class="startagain">
+  
+
+  <div id="start-btn-container" class="start-btn-container" onclick="repeatQuiz()">
+    <div class="start-btn">
+      <div class="start-btn-text">REPEAT QUIZ 
+      </div>
+      <div class="start-btn-arrow"><img src="img/arrow-30-32.png">
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+</div> 
+
+
+
     </div>
   </div>
 </body>
